@@ -4,6 +4,7 @@ using System.Collections;
 public class TextAdventure : MonoBehaviour {
 
 	public string currentRoom = "entryway";
+	public Camera myCamera;
 
 	public string room_north;
 	public string room_south;
@@ -34,6 +35,9 @@ public class TextAdventure : MonoBehaviour {
 
 			break;
 		case "magicRoom":
+
+			myCamera.backgroundColor = Color.magenta;
+
 			textBuffer = "You are in the magic room.\n";
 
 			room_south = "entryway";
